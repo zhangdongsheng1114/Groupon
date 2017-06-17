@@ -21,7 +21,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
 
     public MyPagerAdapter(FragmentManager fm) {
         super(fm);
-        fragmentList = new ArrayList<Fragment>();
+        fragmentList = new ArrayList<>();
         fragmentList.add(new FragmentA());
         fragmentList.add(new FragmentB());
         fragmentList.add(new FragmentC());

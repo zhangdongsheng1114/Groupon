@@ -1,14 +1,14 @@
 package com.tarena.groupon.ui;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 
 import com.tarena.groupon.R;
 import com.tarena.groupon.util.SPUtil;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends Activity {
     SPUtil spUtil;
 
     @Override
@@ -24,8 +24,8 @@ public class SplashActivity extends AppCompatActivity {
                 // 读取偏好设置文件中的值
                 // 根据是否是第一次使用进行相应的界面跳转
                 Intent intent;
-                // spUtil.isFirst()
-                if (true) {
+                // spUtil.isFirst()/true
+                if (spUtil.isFirst()) {
                     //向新手指导页跳转
                     intent = new Intent(SplashActivity.this, GuideActivity.class);
                     spUtil.setFirst(false);
