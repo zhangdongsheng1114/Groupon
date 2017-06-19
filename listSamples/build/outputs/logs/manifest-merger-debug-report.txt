@@ -18,14 +18,14 @@ ADDED from C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\src\main\An
 uses-sdk
 ADDED from C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\src\main\AndroidManifest.xml:7:5-9:41
 MERGED from [Groupon:viewpagerIndicator_library:unspecified] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\Groupon\viewpagerIndicator_library\unspecified\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v4:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		ADDED from C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\src\main\AndroidManifest.xml:9:9-38
 		INJECTED from C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\src\main\AndroidManifest.xml
@@ -36,12 +36,12 @@ MERGED from [com.android.support:support-compat:25.1.1] C:\Users\tarena\AndroidS
 		INJECTED from C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\src\main\AndroidManifest.xml
 application
 ADDED from C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\src\main\AndroidManifest.xml:11:5-297:19
-MERGED from [com.android.support:support-v4:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.1.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\AndroidManifest.xml:29:5-20
 	android:label
 		ADDED from C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\src\main\AndroidManifest.xml:12:9-50
 	android:icon
@@ -272,3 +272,14 @@ ADDED from C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\src\main\An
 		ADDED from C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\src\main\AndroidManifest.xml:290:17-56
 	android:name
 		ADDED from C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\src\main\AndroidManifest.xml:288:17-60
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:support-v4:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:support-v4:25.3.1] C:\Users\tarena\AndroidStudioProjects\Groupon\listSamples\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:26:9-47

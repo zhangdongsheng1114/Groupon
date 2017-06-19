@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.tarena.groupon.R;
+import com.tarena.groupon.util.HttpUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -176,7 +177,6 @@ public class MainActivity extends Activity {
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
             }
 
             @Override
@@ -223,6 +223,33 @@ public class MainActivity extends Activity {
         datas.add("iii");
         datas.add("jjj");
         adapter.notifyDataSetChanged();
-    }
 
+        // 1.发起一个请求，服务器响应
+        // 以GET的方式发起请求
+        // 请求格式：http://xxx.xxxx.com/xxx?key=14xxxxxxx&city=%e8%f8%c6%xx%xx%xx
+        // 利用HttpClient(apache)
+        // HttpURLConnection
+
+        // Volley
+
+        // Retrofit+OKHttp
+
+        // 2.根据服务器响应的内容进行解析
+        // JSON字符串、XML文档
+        // 解析JSON字符串：
+        // JSONLib(JsonObject)
+        // GSON
+        // fastJson
+        // jackson
+        // 解析XML文档
+        // XMLPull
+        // SAX
+
+        // 3.将解析结果放到View中显示
+        // 放到ListView中显示需要适配器，条目布局
+
+//        HttpUtil.testHttpURLConnection();
+//        HttpUtil.testVolley();
+        HttpUtil.testRetrofit();
+    }
 }
