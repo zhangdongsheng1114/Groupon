@@ -1,6 +1,13 @@
 package com.tarena.groupon.util;
 
 import android.util.Log;
+import android.widget.ImageView;
+
+import com.android.volley.Response;
+import com.squareup.picasso.Picasso;
+import com.tarena.groupon.R;
+import com.tarena.groupon.app.MyApp;
+import com.tarena.groupon.bean.TuanBean;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -15,6 +22,8 @@ import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import retrofit2.Callback;
 
 /**
  * 网络访问工具类
@@ -61,6 +70,7 @@ public class HttpUtil {
      * @return
      */
     public static String getSign(String appkey, String appsecret, Map<String, String> params) {
+
         StringBuilder stringBuilder = new StringBuilder();
         // 对参数名进行字典排序
         String[] keyArray = params.keySet().toArray(new String[0]);
@@ -143,29 +153,22 @@ public class HttpUtil {
     }
 
     public static void testRetrofit() {
-        /*// 1.创建Retrofit对象
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://api.dianping.com/v1/").addConverterFactory(ScalarsConverterFactory.create()).build();
-        // 2.创建接口的实现类对象
-        NetService service = retrofit.create(NetService.class);
-        Map<String,String> params = new HashMap<String, String>();
-        params.put("city","北京");
-        params.put("category","美食");
-        String sign = getSign(APPKEY,APPSECRET,params);
-        // 3.获得请求对象
-        Call<String> call = service.test(HttpUtil.APPKEY,sign,params);
-        // 4.将请求对象放到请求队列中
-        call.enqueue(new Callback<String>() {
-            @Override
-            public void onResponse(Call<String> call, Response<String> response) {
-                String string = response.body();
-                Log.d("TAG", "利用Retrofit获得的响应: "+string);
-            }
-
-            @Override
-            public void onFailure(Call<String> call, Throwable throwable) {
-
-            }
-        });*/
         RetrofitClient.getInstance().test();
+    }
+
+    public static void getDailyDealsByVolley(String city, Response.Listener<TuanBean> listener) {
+        VolleyClient.getINSTANCE().getDailyDeals2(city, listener);
+    }
+
+    public static void getDailyDealsByRetrofit(String city, Callback<TuanBean> callback) {
+        RetrofitClient.getInstance().getDailyDeals3(city, callback);
+    }
+
+    public static void loadImage(String url, ImageView iv) {
+        VolleyClient.getINSTANCE().loadImage(url, iv);
+    }
+
+    public static void displayImage(String url, ImageView iv) {
+        Picasso.with(MyApp.CONTEXT).load(url).placeholder(R.drawable.bucket_no_picture).error(R.drawable.bucket_no_picture).into(iv);
     }
 }
