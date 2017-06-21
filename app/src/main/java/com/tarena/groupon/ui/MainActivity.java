@@ -245,7 +245,7 @@ public class MainActivity extends Activity {
         });*/
 
         // Retrofit+OKHttp
-
+        
         HttpUtil.getDailyDealsByRetrofit(tvCity.getText().toString(), new Callback<TuanBean>() {
             @Override
             public void onResponse(Call<TuanBean> call, retrofit2.Response<TuanBean> response) {

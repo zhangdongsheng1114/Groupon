@@ -1,14 +1,98 @@
 [
     {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\hotel_booking_web_loading_1.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\hotel_booking_web_loading_1.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\review_loading_3.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\review_loading_3.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_loading_00.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_loading_00.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_07.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_07.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_04.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_04.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\indicator_arrow.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_loading_02.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_loading_02.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_01.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_01.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\review_loading_4.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\review_loading_4.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_loading_01.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_loading_01.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\review_loading_1.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\review_loading_1.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_05.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_05.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_08.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_08.png"
+    },
+    {
         "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_rotate.png",
         "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_10.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_10.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_02.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_02.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\hotel_booking_web_loading_3.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\hotel_booking_web_loading_3.png"
     },
     {
         "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_flip.png",
         "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\default_ptr_flip.png"
     },
     {
-        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\indicator_arrow.png",
-        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\indicator_arrow.png"
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_00.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_00.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_06.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_06.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\hotel_booking_web_loading_2.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\hotel_booking_web_loading_2.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\review_loading_2.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\review_loading_2.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_09.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_09.png"
+    },
+    {
+        "merged": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\dropdown_anim_03.png",
+        "source": "C:\\Users\\tarena\\AndroidStudioProjects\\Groupon\\pullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\dropdown_anim_03.png"
     }
 ]

@@ -218,6 +218,14 @@ public class VolleyClient {
         queue.add(req);
     }
 
+    public void getCities(Response.Listener<String> listener) {
+
+        Map<String, String> params = new HashMap<>();
+        String url = HttpUtil.getURL("http://api.dianping.com/v1/metadata/get_cities_with_businesses", params);
+        StringRequest req = new StringRequest(url, listener, null);
+        queue.add(req);
+    }
+
     /**
      * 自定义请求对象
      */
