@@ -3,6 +3,7 @@ package com.tarena.groupon.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -67,7 +68,7 @@ public class MainActivity extends Activity {
     @OnClick(R.id.ll_header_left_container)
     public void jumpToCity(View view) {
         Intent intent = new Intent(this, CityActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, 101);
     }
 
     @OnClick(R.id.iv_header_main_add)
@@ -213,6 +214,12 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+//        String city = getIntent().getStringExtra("city");
+//            if (!TextUtils.isEmpty(city)) {
+//                tvCity.setText(city);
+//            } else {
+//                tvCity.setText("北京");
+//        }
         refresh();
     }
 
@@ -245,26 +252,34 @@ public class MainActivity extends Activity {
         });*/
 
         // Retrofit+OKHttp
-        
-        HttpUtil.getDailyDealsByRetrofit(tvCity.getText().toString(), new Callback<TuanBean>() {
-            @Override
-            public void onResponse(Call<TuanBean> call, retrofit2.Response<TuanBean> response) {
-                if (response != null) {
-                    TuanBean tuanBean = response.body();
-                    List<TuanBean.Deal> deals = tuanBean.getDeals();
-                    adapter.addAll(deals, true);
-                } else {
-                    Toast.makeText(MainActivity.this, "今日无新增团购内容", Toast.LENGTH_SHORT).show();
-                }
-                ptrListView.onRefreshComplete();
-            }
+
+        new Handler().postDelayed(new Runnable() {
 
             @Override
-            public void onFailure(Call<TuanBean> call, Throwable throwable) {
-                Log.d("TAG", "onFailure: " + throwable.getMessage());
-                ptrListView.onRefreshComplete();
+
+            public void run() {
+                HttpUtil.getDailyDealsByRetrofit(tvCity.getText().toString(), new Callback<TuanBean>() {
+                    @Override
+                    public void onResponse(Call<TuanBean> call, retrofit2.Response<TuanBean> response) {
+                        if (response != null) {
+                            TuanBean tuanBean = response.body();
+                            List<TuanBean.Deal> deals = tuanBean.getDeals();
+                            adapter.addAll(deals, true);
+                        } else {
+                            Toast.makeText(MainActivity.this, "今日无新增团购内容", Toast.LENGTH_SHORT).show();
+                        }
+                        ptrListView.onRefreshComplete();
+                    }
+
+                    @Override
+                    public void onFailure(Call<TuanBean> call, Throwable throwable) {
+                        Log.d("TAG", "onFailure: " + throwable.getMessage());
+                        ptrListView.onRefreshComplete();
+                    }
+                });
             }
-        });
+        }, 2000);
+
 
         // 2.根据服务器响应的内容进行解析
         // JSON字符串、XML文档
@@ -283,5 +298,14 @@ public class MainActivity extends Activity {
 //        HttpUtil.testHttpURLConnection();
 //        HttpUtil.testVolley();
 //        HttpUtil.testRetrofit();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && requestCode == 101) {
+            String city = data.getStringExtra("city");
+            tvCity.setText(city);
+        }
     }
 }
