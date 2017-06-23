@@ -163,6 +163,7 @@ public class MainActivity extends Activity {
             public Object instantiateItem(ViewGroup container, int position) {
                 int layoutId = resIDs[position % 3];
                 View view = LayoutInflater.from(MainActivity.this).inflate(layoutId, viewPager, false);
+
                 container.addView(view);
                 return view;
             }
