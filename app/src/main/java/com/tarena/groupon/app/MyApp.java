@@ -3,6 +3,7 @@ package com.tarena.groupon.app;
 import android.app.Application;
 
 import com.tarena.groupon.bean.CitynameBean;
+import com.tarena.groupon.util.SPUtil;
 
 import java.util.List;
 
@@ -15,9 +16,12 @@ public class MyApp extends Application {
     public static MyApp CONTEXT;
     // 城市名称的缓存
     public static List<CitynameBean> citynameBeenList;
+
     @Override
     public void onCreate() {
         super.onCreate();
         CONTEXT = this;
+        SPUtil spUtil = new SPUtil(this);
+        spUtil.setCloseBanner(false);
     }
 }

@@ -2,6 +2,7 @@ package com.tarena.groupon.util;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.LruCache;
 import android.widget.ImageView;
@@ -226,6 +227,26 @@ public class VolleyClient {
         queue.add(req);
     }
 
+    public void getFoods(String city, String region, Response.Listener<String> listener) {
+        Map<String, String> params = new HashMap<>();
+        params.put("city", city);
+        params.put("category", "美食");
+        if (!TextUtils.isEmpty(region)) {
+            params.put("region", region);
+        }
+        String url = HttpUtil.getURL("http://api.dianping.com/v1/business/find_businesses", params);
+        StringRequest req = new StringRequest(url, listener, null);
+        queue.add(req);
+    }
+
+    public void getDistricts(String city, Response.Listener<String> listener) {
+        Map<String, String> params = new HashMap<>();
+        params.put("city", city);
+        String url = HttpUtil.getURL("http://api.dianping.com/v1/metadata/get_regions_with_businesses", params);
+        StringRequest req = new StringRequest(url, listener, null);
+        queue.add(req);
+    }
+
     /**
      * 自定义请求对象
      */
@@ -254,5 +275,6 @@ public class VolleyClient {
         protected void deliverResponse(TuanBean tuanBean) {
             listener.onResponse(tuanBean);
         }
+
     }
 }

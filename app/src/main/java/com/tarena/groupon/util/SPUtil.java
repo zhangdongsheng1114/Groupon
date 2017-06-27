@@ -13,7 +13,7 @@ import com.tarena.groupon.config.Constant;
  * 3.PreferenceManager的getDefaultSharedPreferences(Context);
  * 获取preference_包名 偏好设置文件
  * 模式Context_MODE_PRIVATE
- *
+ * <p>
  * Created by tarena on 2017/6/15.
  */
 public class SPUtil {
@@ -35,6 +35,16 @@ public class SPUtil {
     public void setFirst(boolean flag) {
         SharedPreferences.Editor editor = sp.edit();
         editor.putBoolean(Constant.FIRST, flag);
+        editor.commit();
+    }
+
+    public boolean isCloseBanner() {
+        return sp.getBoolean(Constant.ISCLOSE, false);
+    }
+
+    public void setCloseBanner(boolean flag) {
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putBoolean(Constant.ISCLOSE, flag);
         editor.commit();
     }
 }
