@@ -7,8 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.baidu.mapapi.model.LatLng;
 import com.tarena.groupon.R;
+import com.tarena.groupon.app.MyApp;
 import com.tarena.groupon.bean.BusinessBean;
+import com.tarena.groupon.util.DistanceUtil;
 import com.tarena.groupon.util.HttpUtil;
 
 import java.util.List;
@@ -52,6 +55,7 @@ public class BusinessAdapter extends MyBaseAdapter<BusinessBean.Business> {
         Random random = new Random();
         int idx = random.nextInt(7);
         viewHolder.ivRating.setImageResource(stars[idx]);
+
         int price = random.nextInt(100) + 50;
         viewHolder.tvPrice.setText("￥" + price + "/人");
         StringBuilder sb = new StringBuilder();
@@ -62,7 +66,9 @@ public class BusinessAdapter extends MyBaseAdapter<BusinessBean.Business> {
                 sb.append("/").append(item.getRegions().get(j));
             }
         }
+
         sb.append(" ");
+
         for (int j = 0; j < item.getCategories().size(); j++) {
             if (j == 0) {
                 sb.append(item.getCategories().get(j));
@@ -71,6 +77,17 @@ public class BusinessAdapter extends MyBaseAdapter<BusinessBean.Business> {
             }
         }
         viewHolder.tvInfo.setText(sb.toString());
+
+
+        if (MyApp.myLocation != null) {
+//            double distance = DistanceUtil.getDistance(item.getLongitude(), item.getLatitude(),
+//                    MyApp.myLocation.longitude, MyApp.myLocation.latitude);
+            double distance = DistanceUtil.getDistance(new LatLng(item.getLatitude(),item.getLatitude()),MyApp.myLocation);
+            viewHolder.tvDistance.setText(distance+"米");
+        } else {
+            viewHolder.tvDistance.setText("");
+        }
+
         return view;
     }
 

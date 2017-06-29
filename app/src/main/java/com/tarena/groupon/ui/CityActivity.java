@@ -31,10 +31,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by tarena on 2017/6/16.
- */
-
 public class CityActivity extends Activity {
 
     @BindView(R.id.rv_city_cities)
@@ -122,8 +118,8 @@ public class CityActivity extends Activity {
 
     private void refresh() {
         //从内存缓存中读取城市数据
-        if (MyApp.citynameBeenList != null && MyApp.citynameBeenList.size() > 0) {
-            adapter.addAll(MyApp.citynameBeenList, true);
+        if (MyApp.citynameBeanList != null && MyApp.citynameBeanList.size() > 0) {
+            adapter.addAll(MyApp.citynameBeanList, true);
             Log.d("TAG", "城市数据从内存缓存中加载 ");
             return;
         }
@@ -133,7 +129,7 @@ public class CityActivity extends Activity {
         if (list != null && list.size() > 0) {
             adapter.addAll(list, true);
 
-            MyApp.citynameBeenList = list;
+            MyApp.citynameBeanList = list;
             Log.d("TAG", "城市数据从数据库中加载 ");
             return;
 
@@ -174,7 +170,7 @@ public class CityActivity extends Activity {
                 adapter.addAll(citynameBeanList, true);
                 Log.d("TAG", "城市名称数据从网络中加载");
                 //将数据缓存起来
-                MyApp.citynameBeenList = citynameBeanList;
+                MyApp.citynameBeanList = citynameBeanList;
 
                 //向数据库中写入城市数据
                 new Thread() {

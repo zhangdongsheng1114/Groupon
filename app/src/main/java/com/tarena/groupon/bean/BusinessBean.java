@@ -1,11 +1,8 @@
 package com.tarena.groupon.bean;
 
+
 import java.io.Serializable;
 import java.util.List;
-
-/**
- * Created by tarena on 2017/6/26.
- */
 
 public class BusinessBean implements Serializable {
     String status;

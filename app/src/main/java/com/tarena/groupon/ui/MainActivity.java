@@ -35,17 +35,19 @@ import retrofit2.Call;
 import retrofit2.Callback;
 
 public class MainActivity extends Activity {
-    // 头部
+
+    //头部
     @BindView(R.id.ll_header_left_container)
     LinearLayout cityContainer;
     @BindView(R.id.tv_header_main_city)
-    TextView tvCity; // 显示城市名称
+    TextView tvCity;//显示城市名称
     @BindView(R.id.iv_header_main_add)
     ImageView ivAdd;
     @BindView(R.id.menu_layout)
     View menuLayout;
 
-    // 中段
+
+    //中段
     @BindView(R.id.ptrlv_main)
     PullToRefreshListView ptrListView;
 
@@ -53,16 +55,18 @@ public class MainActivity extends Activity {
     List<TuanBean.Deal> datas;
     DealAdapter adapter;
 
-    // 脚部
+    //脚部
     @BindView(R.id.rg_main_footer)
     RadioGroup rg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(
+                R.layout.activity_main);
         ButterKnife.bind(this);
         initListView();
+
     }
 
     @OnClick(R.id.ll_header_left_container)
@@ -78,13 +82,16 @@ public class MainActivity extends Activity {
         } else {
             menuLayout.setVisibility(View.VISIBLE);
         }
+
     }
 
+
     private void initListView() {
+
         listView = ptrListView.getRefreshableView();
-        datas = new ArrayList<>();
+        datas = new ArrayList<TuanBean.Deal>();
         adapter = new DealAdapter(this, datas);
-        // 为ListView添加若干个头部
+        //为ListView添加若干个头部
         LayoutInflater inflater = LayoutInflater.from(this);
 
         View listHeaderIcons = inflater.inflate(R.layout.header_list_icons, listView, false);
@@ -103,31 +110,35 @@ public class MainActivity extends Activity {
 
         initListHeaderIcons(listHeaderIcons);
 
-        // 添加下拉松手后的刷新
+        //添加下拉松手后的刷新
         ptrListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
             @Override
             public void onRefresh(PullToRefreshBase<ListView> refreshView) {
-                /*new Handler().postDelayed(new Runnable() {
+
+               /* new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        datas.add(0, "新增内容");
+                        datas.add(0,"新增内容");
                         adapter.notifyDataSetChanged();
                         ptrListView.onRefreshComplete();
                     }
                 }, 1500);*/
+
                 refresh();
+
             }
         });
 
+
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
-            public void onScrollStateChanged(AbsListView view, int scrollState) {
+            public void onScrollStateChanged(AbsListView absListView, int i) {
 
             }
 
             @Override
-            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-                if (firstVisibleItem == 0) {
+            public void onScroll(AbsListView absListView, int i, int i1, int i2) {
+                if (i == 0) {
                     cityContainer.setVisibility(View.VISIBLE);
                     ivAdd.setVisibility(View.VISIBLE);
                 } else {
@@ -136,6 +147,7 @@ public class MainActivity extends Activity {
                 }
             }
         });
+
     }
 
     private void initListHeaderIcons(View listHeaderIcons) {
@@ -161,10 +173,11 @@ public class MainActivity extends Activity {
 
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
+
                 int layoutId = resIDs[position % 3];
                 View view = LayoutInflater.from(MainActivity.this).inflate(layoutId, viewPager, false);
-
                 if (position % 3 == 0) {
+
                     View foodView = view.findViewById(R.id.ll_icons_list_food);
                     foodView.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -172,6 +185,7 @@ public class MainActivity extends Activity {
                             Intent intent = new Intent(MainActivity.this, BusinessActivity.class);
                             intent.putExtra("city", tvCity.getText().toString());
                             startActivity(intent);
+
                         }
                     });
                 }
@@ -195,10 +209,12 @@ public class MainActivity extends Activity {
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
             }
 
             @Override
             public void onPageSelected(int position) {
+
                 iv1.setImageResource(R.drawable.banner_dot);
                 iv2.setImageResource(R.drawable.banner_dot);
                 iv3.setImageResource(R.drawable.banner_dot);
@@ -214,6 +230,7 @@ public class MainActivity extends Activity {
                         iv3.setImageResource(R.drawable.banner_dot_pressed);
                         break;
                 }
+
             }
 
             @Override
@@ -221,18 +238,22 @@ public class MainActivity extends Activity {
 
             }
         });
+
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 //        String city = getIntent().getStringExtra("city");
-//            if (!TextUtils.isEmpty(city)) {
-//                tvCity.setText(city);
-//            } else {
-//                tvCity.setText("北京");
+//        if(!TextUtils.isEmpty(city)) {
+//            tvCity.setText(city);
+//        }else{
+//            tvCity.setText("北京");
 //        }
+        rg.check(R.id.rb_main_footer_home);
         refresh();
+
     }
 
     /**
@@ -240,35 +261,35 @@ public class MainActivity extends Activity {
      */
     private void refresh() {
 
-        // 1.发起一个请求，服务器响应
-        // 以GET的方式发起请求
-        // 请求格式：http://xxx.xxxx.com/xxx?key=14xxxxxxx&city=%e8%f8%c6%xx%xx%xx
-        // 利用HttpClient(apache)
-        // HttpURLConnection
+        //1)发起一个请求，服务器响应
+        //以GET的方式发起请求
+        //请求格式：http://xxx.xxxx.com/xxx？key=14xxxxxxx&city=%e8%f8%c6%xx%xx%xx
+        //利用HttpClient(apache)
+        //HttpURLConnection
 
-        // Volley
+        //Volley
 
         /*HttpUtil.getDailyDealsByVolley(tvCity.getText().toString(), new Response.Listener<TuanBean>() {
             @Override
             public void onResponse(TuanBean s) {
                 if (s != null) {
                     List<TuanBean.Deal> deals = s.getDeals();
-                    // 将deals放到ListView中呈现
+                    //将deals放到ListView中呈现
                     adapter.addAll(deals, true);
                 } else {
-                    // 今日无新增团购内容
+                    //今日无新增团购内容
                     Toast.makeText(MainActivity.this, "今日无新增团购内容", Toast.LENGTH_SHORT).show();
                 }
                 ptrListView.onRefreshComplete();
+
+
             }
         });*/
 
-        // Retrofit+OKHttp
+        //Retrofit+OKHttp
 
         new Handler().postDelayed(new Runnable() {
-
             @Override
-
             public void run() {
                 HttpUtil.getDailyDealsByRetrofit(tvCity.getText().toString(), new Callback<TuanBean>() {
                     @Override
@@ -293,8 +314,8 @@ public class MainActivity extends Activity {
         }, 2000);
 
 
-        // 2.根据服务器响应的内容进行解析
-        // JSON字符串、XML文档
+        //2)根据服务器响应的内容进行解析
+        // JSON字符串 / XML文档
         // 解析JSON字符串：
         // JSONLib(JsonObject)
         // GSON
@@ -304,12 +325,13 @@ public class MainActivity extends Activity {
         // XMLPull
         // SAX
 
-        // 3.将解析结果放到View中显示
-        // 放到ListView中显示需要适配器，条目布局
+        //3)将解析结果放到View中显示
+        //放到ListView中显示需要适配器、条目布局
 
-//        HttpUtil.testHttpURLConnection();
-//        HttpUtil.testVolley();
-//        HttpUtil.testRetrofit();
+        //HttpUtil.testHttpURLConnection();
+        //HttpUtil.testVolley();
+        //HttpUtil.testRetrofit();
+
     }
 
     @Override
@@ -320,4 +342,13 @@ public class MainActivity extends Activity {
             tvCity.setText(city);
         }
     }
+
+
+    @OnClick(R.id.rb_main_footer_find)
+    public void jump(View view) {
+        Intent intent = new Intent(this, FindActivity.class);
+        intent.putExtra("from", "main");
+        startActivity(intent);
+    }
+
 }

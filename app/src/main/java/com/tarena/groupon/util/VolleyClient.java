@@ -7,6 +7,7 @@ import android.util.Log;
 import android.util.LruCache;
 import android.widget.ImageView;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -247,6 +248,11 @@ public class VolleyClient {
         queue.add(req);
     }
 
+    public void getComment(String url, Response.Listener<String> listener) {
+        StringRequest req = new StringRequest(url, listener, null);
+        queue.add(req);
+    }
+
     /**
      * 自定义请求对象
      */
@@ -277,4 +283,28 @@ public class VolleyClient {
         }
 
     }
+
+    public class CommentRequest extends StringRequest {
+        Response.Listener<String> listener;
+
+        public CommentRequest(String url, Response.Listener<String> listener) {
+            super(Method.GET, url, listener, null);
+            this.listener = listener;
+        }
+
+        @Override
+        public Map<String, String> getHeaders() throws AuthFailureError {
+
+            Map<String, String> params = super.getHeaders();
+            if (params == null) {
+                params = new HashMap<String, String>();
+            }
+            params.put("User-Agent", "Mozilla/5.0 (Windows NT 6.1)");
+
+            return params;
+        }
+
+    }
 }
+
+

@@ -1,5 +1,6 @@
 package com.tarena.groupon.ui;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ public class SearchActivity extends Activity {
         setContentView(R.layout.activity_search);
         ButterKnife.bind(this);
         initListView();
+
     }
 
     @OnTextChanged(R.id.et_search)
@@ -47,26 +49,29 @@ public class SearchActivity extends Activity {
     }
 
     /**
-     * 根据输入的内容，筛选符合的城市的名称
+     * 根据输入的内容
+     * 筛选符合的城市名称
+     *
      * @param s
      */
     private void searchCities(String s) {
 
-        List<String> temps = new ArrayList<>();
-        // 中文char 16bit 0-65535
+        List<String> temps = new ArrayList<String>();
+        //中文 char 16bit 0-65535
         if (s.matches("[\u4e00-\u9fff]+")) {
 
-            for (CitynameBean bean : MyApp.citynameBeenList) {
+            for (CitynameBean bean : MyApp.citynameBeanList) {
                 if (bean.getCityName().contains(s)) {
                     temps.add(bean.getCityName());
                 }
             }
-        } else {  // 拼音
-            for (CitynameBean c : MyApp.citynameBeenList) {
-                if (c.getCityName().contains(s)) {
+        } else {//拼音
+            for (CitynameBean c : MyApp.citynameBeanList) {
+                if (c.getPyName().contains(s)) {
                     temps.add(c.getCityName());
                 }
             }
+
         }
 
         if (temps.size() > 0) {
@@ -74,20 +79,27 @@ public class SearchActivity extends Activity {
             cities.addAll(temps);
             adapter.notifyDataSetChanged();
         }
+
+
     }
 
     private void initListView() {
-        cities = new ArrayList<>();
+        cities = new ArrayList<String>();
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, cities);
         listView.setAdapter(adapter);
+
     }
 
     @OnItemClick(R.id.lv_search_listview)
     public void selectCity(AdapterView<?> adapterView, View view, int i, long l) {
+
         Intent data = new Intent();
         String city = adapter.getItem(i);
         data.putExtra("city", city);
         setResult(RESULT_OK, data);
         finish();
+
     }
+
+
 }
